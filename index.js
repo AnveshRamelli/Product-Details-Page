@@ -69,7 +69,7 @@ const updateMainImage = (index) => {
 
 const validateQuantity = () => {
     const quantityValue = parseInt(quantityInput.value);
-    addToCartButton.disabled = quantityValue < 1;
+    addToCartButton.disabled = isNaN(quantityValue) || quantityValue < 1;
 }
 
 // Arrow navigation for carousel
